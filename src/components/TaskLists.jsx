@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { MdAdd, MdDelete } from "react-icons/md";
 import { db } from '../firebase.js';
 import { collection, addDoc, getDocs, updateDoc, doc, deleteDoc } from 'firebase/firestore';
+import SignOut from "./SignOut.jsx";
 
 const TaskLists = () => {
     const [loading, setLoading] = useState(false);
@@ -132,6 +133,7 @@ const TaskLists = () => {
                     </li>
                 ))}
             </ul>
+            <SignOut/>
         </div>
     );
 };
